@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    margin: auto;
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+    overflow: hidden;
+}
+
+:root{
+    
+}
+
+h1 {
+    background-color: cyan;
+    text-align: center;
+}
+
+h2 {
+    background-color: pink;
+}
+
+.switchPageWrapper {
+    background-color: bisque;
+    border: none;
+    border-right: 2px solid black;
+}
+
+.switchPage {
+    background-color: aquamarine;
+    height: 30px;
+    width: 50%;
+    border: 2px solid black;
+    border-right: none;
+    font-size: 1rem;
+}
+
+.pageWrapper {
+    background-color: blanchedalmond;
+}
+
+.sectionWrapper {
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 10px;
+    width: calc(100% - 10px);
+    max-width: 1000px;
+}
+
+form {
+    margin: 5px;
+}
+
+.elementWrapper {
+    
+}
+
+label {
+    display:block;
+}
+
+label::after {
+    content: ":"
+}
+
+input {
+    display:block;
+    width: 100%;
+}

@@ -1,7 +1,7 @@
 import React from "react";
 
 const ReviewPage = (props) => {
-    //something
+    return <div className="pageWrapper">REVIEWS PAGE</div>
 }
 
 export default ReviewPage;

@@ -5,10 +5,10 @@ import WorkExperience from "./FormsPages/WorkExperience";
 
 const FormsPage = (props) => {
     return (
-        <div>
-            <PersonalInfo />;
-            <Education />;
-            <WorkExperience />;
+        <div className="pageWrapper">
+            <PersonalInfo />
+            <Education />
+            <WorkExperience />
         </div>
     );
 };

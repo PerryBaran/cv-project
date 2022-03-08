@@ -1,13 +1,13 @@
 import React from "react";
 import FormsPage from "./FormsPage"
-import ReviewPage from "./reviewPage";
+import ReviewPage from "./ReviewPage";
 
 const Page = (props) => {
-    
-    if (this.state.form) {
-        return <FormsPage />;
+    const { form } = props;
+    if (form) {
+        return <FormsPage />
     }
-    return <ReviewPage />;
+    return <ReviewPage />
 };
 
 export default Page;
