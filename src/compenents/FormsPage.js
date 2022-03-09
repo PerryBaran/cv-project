@@ -7,7 +7,7 @@ const FormsPage = (props) => {
     const { personal, education, work, functions} = props
     return (
         <div className="pageWrapper">
-            <PersonalInfo personal={personal}/>
+            <PersonalInfo personal={personal} functions={functions}/>
             <Education education={education} functions={functions}/>
             <WorkExperience work={work} functions={functions}/>
         </div>

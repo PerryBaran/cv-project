@@ -37,7 +37,10 @@ class App extends Component {
         addEducation: this.addEducation,
         delEducation: this.delEducation,
         addWork: this.addWork,
-        delWork: this.delWork
+        delWork: this.delWork,
+        handlePersonal: this.handlePeronsalChange,
+        handleEducation: this.handleEducationChange,
+        handleWork: this.handleWorkChange
       }
     };
   }
@@ -95,6 +98,49 @@ class App extends Component {
       work: work
     })
   }
+
+  handlePeronsalChange = (e) => {
+    const value = e.target.value;
+    const name = e.target.name;
+
+    const personal = {
+      ...this.state.personal,
+      [name]: value
+    };
+    this.setState({
+      personal
+    });
+  };
+
+  handleEducationChange = e => {
+    const value = e.target.value;
+    const name = e.target.name;
+    const id = e.target.id;
+
+    const education = [...this.state.education];
+    education[id] = {
+      ...education[id],
+      [name]: value
+    };
+    this.setState({
+      education: education
+    });
+  };
+
+  handleWorkChange = e => {
+    const value = e.target.value;
+    const name = e.target.name;
+    const id = e.target.id;
+
+    const work = [...this.state.work];
+    work[id] = {
+      ...work[id],
+      [name]: value
+    };
+    this.setState({
+      work: work
+    });
+  };
 
 
   render() {

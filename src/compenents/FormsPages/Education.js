@@ -8,24 +8,25 @@ const Education = (props) => {
             <h2>Education</h2>
             <div>
                 {education.map((part) => {
+                    const index = education.indexOf(part);
                     return(
                         <div key={part.id}>
                             <form>
-                                <FormElement title="Subject" info={part.subject}/>
-                                <FormElement title="Level" info={part.level}/>
-                                <FormElement title="School" info={part.school}/>
-                                <FormElement title="From" info={part.from}/>
-                                <FormElement title="To" info={part.to}/>
+                                <FormElement title="Subject" info={part.subject} functions={functions.handleEducation} name="subject" index={index}/>
+                                <FormElement title="Level" info={part.level} functions={functions.handleEducation} name="level" index={index}/>
+                                <FormElement title="School" info={part.school} functions={functions.handleEducation} name="school" index={index}/>
+                                <FormElement title="From" info={part.from} functions={functions.handleEducation} name="from" index={index}/>
+                                <FormElement title="To" info={part.to} functions={functions.handleEducation} name="to" index={index}/>
                             </form>
                             <div>
-                                <button onClick={() => functions.delEducation(part.id)}  className="del">delete</button>
+                                <button onClick={() => functions.delEducation(part.id)}  className="delAdd">delete</button>
                             </div>
                         </div>   
                     )
                 })}
             </div>
             <div>
-                <button onClick={functions.addEducation}  className="add">+</button>
+                <button onClick={functions.addEducation}  className="delAdd">add</button>
             </div>
         </div>
     )
