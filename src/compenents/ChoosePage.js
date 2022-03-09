@@ -3,11 +3,11 @@ import FormsPage from "./FormsPage"
 import ReviewPage from "./ReviewPage";
 
 const Page = (props) => {
-    const { form } = props;
+    const { form, personal, education, work, functions} = props
     if (form) {
-        return <FormsPage />
+        return <FormsPage personal={personal} education={education} work={work} functions={functions}/>
     }
-    return <ReviewPage />
+    return <ReviewPage personal={personal} education={education} work={work}/>
 };
 
 export default Page;

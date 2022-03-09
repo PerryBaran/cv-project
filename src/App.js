@@ -1,13 +1,45 @@
 import React, { Component } from "react";
 import Page from "./compenents/ChoosePage";
+import SwitchPageButton from "./compenents/SwitchPageButton";
+import uniqid from "uniqid";
 
 class App extends Component {
   constructor(props) {
-      super(props);
+    super(props);
 
-      this.state = {
-        form: true
-      };
+    this.state = {
+      form: true,
+      personal: {
+        name: '',
+        age: '',
+        gender: '',
+        number: '',
+        email: '',
+        bio: ''
+      },
+      education: [{
+        subject: '',
+        level: '',
+        school: '',
+        from: '',
+        to: '',
+        id: uniqid()
+      }],
+      work: [{
+        employer: '',
+        position: '',
+        from: '',
+        to: '',
+        role: '',
+        id: uniqid()
+      }],
+      functions: {
+        addEducation: this.addEducation,
+        delEducation: this.delEducation,
+        addWork: this.addWork,
+        delWork: this.delWork
+      }
+    };
   }
 
   formTrue = () => {
@@ -22,15 +54,59 @@ class App extends Component {
     });
   };
 
+  addEducation = () => {
+    const educationInfo = {
+      subject: '',
+      level: '',
+      school: '',
+      from: '',
+      to: '',
+      id: uniqid()
+    }
+    this.setState({
+      education: this.state.education.concat(educationInfo) 
+    });
+  };
+
+  delEducation = (id) => {
+    const education = this.state.education.filter(part => part.id !== id);
+    this.setState({
+      education: education
+    })
+  }
+
+  addWork = () => {
+    const workInfo = {
+      employer: '',
+      position: '',
+      from: '',
+      to: '',
+      role: '',
+      id: uniqid()
+    }
+    this.setState({
+      work: this.state.work.concat(workInfo) 
+    });
+  };
+
+  delWork = (id) => {
+    const work = this.state.work.filter(part => part.id !== id);
+    this.setState({
+      work: work
+    })
+  }
+
+
   render() {
+    const { form, personal, education, work, functions} = this.state
     return (
         <div>
             <h1>CV Application</h1>
             <div className="switchPageWrapper">
-              <button onClick={this.formTrue} className="switchPage">Form</button>
-              <button onClick={this.formFalse} className="switchPage">Review</button>
+              <SwitchPageButton formSelect={this.formTrue} active={this.state.form} text="Form"/>
+              <SwitchPageButton formSelect={this.formFalse} active={!this.state.form} text="Review"/>
             </div>
-            <Page form={this.state.form}/>
+            <Page form={form} personal={personal} education={education} work={work} functions={functions}/>
         </div>
     )
   }

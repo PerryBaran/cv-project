@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin: auto;
     -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
-    overflow: hidden;
 }
 
 :root{
@@ -21,16 +20,18 @@ h2 {
 .switchPageWrapper {
     background-color: bisque;
     border: none;
-    border-right: 2px solid black;
 }
 
 .switchPage {
     background-color: aquamarine;
     height: 30px;
     width: 50%;
-    border: 2px solid black;
-    border-right: none;
+    border: none;
     font-size: 1rem;
+}
+
+.active {
+    background-color: red;
 }
 
 .pageWrapper {
