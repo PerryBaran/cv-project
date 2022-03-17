@@ -8,7 +8,7 @@ const PersonalInfo = (props) => {
              <h2>Personal Infomation</h2>
             <form>
                 <FormElement title="Name" info={personal.name} functions={functions.handlePersonal} name="name" type="text"/>
-                <FormElement title="Age" info={personal.age} functions={functions.handlePersonal} name="age" type="date"/>
+                <FormElement title="Date of Birth" info={personal.age} functions={functions.handlePersonal} name="age" type="date"/>
                 <FormElement title="Gender" info={personal.gender} functions={functions.handlePersonal} name="gender" type="text"/>
                 <FormElement title="Phone Number" info={personal.number} functions={functions.handlePersonal} name="number" type="number"/>
                 <FormElement title="Email" info={personal.email} functions={functions.handlePersonal} name="email" type="email"/>

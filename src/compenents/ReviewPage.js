@@ -3,11 +3,11 @@ import React from "react";
 const ReviewPage = (props) => {
     const { personal, education, work } = props
     return (
-        <div className="pageWrapper">
+        <div className="reviewWrapper">
             <h2 className="name">{personal.name}</h2>
             <div className="infoWrapper">
                 <div className="personalSection">
-                    <p className="personalHeading">Age:</p>
+                    <p className="personalHeading">Date of Birth:</p>
                     <p className="personalInfo">{personal.age}</p>
                 </div>
                 <div className="personalSection">
@@ -23,8 +23,8 @@ const ReviewPage = (props) => {
                     <p className="personalInfo">{personal.email}</p>
                 </div>
                 <div className="personalSection">
-                    <p className="bioHeading">Bio:</p>
-                    <p className="bioInfo">{personal.bio}</p>
+                    <p className="personalHeading">Bio:</p>
+                    <p className="personalInfo">{personal.bio}</p>
                 </div>
             </div>
             <div className="infoWrapper">
@@ -34,7 +34,7 @@ const ReviewPage = (props) => {
                         <div key={part.id}  className="indent5px">
                             <div className="educationSection">
                                 <h4 className="heading">{part.school}</h4>
-                                <p className="info">({part.from} - {part.to})</p>
+                                <p className="info">({part.from} to {part.to})</p>
                             </div>
                             <div className="indent5px">
                                 <p className="level">{part.level}</p>
@@ -51,11 +51,10 @@ const ReviewPage = (props) => {
                     return (
                         <div key={part.id} className="indent5px">
                             <div>
-                                <h4 className="heading">{part.employer}</h4>
-                                <p className="info">({part.from} - {part.to})</p>
+                                <h4 className="heading">{part.position} at {part.employer}</h4>
+                                <p className="info">({part.from} to {part.to})</p>
                             </div>
                             <div className="indent5px">
-                                <p className="position">{part.position}</p>
                                 <p className="role">{part.role}</p>
                             </div>
                         </div>
