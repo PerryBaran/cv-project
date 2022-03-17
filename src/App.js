@@ -17,22 +17,8 @@ class App extends Component {
         email: '',
         bio: ''
       },
-      education: [{
-        subject: '',
-        level: '',
-        school: '',
-        from: '',
-        to: '',
-        id: uniqid()
-      }],
-      work: [{
-        employer: '',
-        position: '',
-        from: '',
-        to: '',
-        role: '',
-        id: uniqid()
-      }],
+      education: [],
+      work: [],
       functions: {
         addEducation: this.addEducation,
         delEducation: this.delEducation,
@@ -61,6 +47,7 @@ class App extends Component {
     const educationInfo = {
       subject: '',
       level: '',
+      grade: '',
       school: '',
       from: '',
       to: '',

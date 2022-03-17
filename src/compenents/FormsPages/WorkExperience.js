@@ -12,11 +12,11 @@ const WorkExperience = (props) => {
                     return(
                         <div key={part.id}>
                             <form className="part">
-                                <FormElement title="Employer" info={part.employer} functions={functions.handleWork} name="employer" index={index}/>
-                                <FormElement title="Position" info={part.position} functions={functions.handleWork} name="position" index={index}/>
-                                <FormElement title="From" info={part.from} functions={functions.handleWork} name="from" index={index}/>
-                                <FormElement title="To" info={part.to} functions={functions.handleWork} name="to" index={index}/>
-                                <FormElement title="Role" info={part.role} functions={functions.handleWork} name="role" index={index}/>
+                                <FormElement title="Employer" info={part.employer} functions={functions.handleWork} name="employer" index={index} type="text"/>
+                                <FormElement title="Position" info={part.position} functions={functions.handleWork} name="position" index={index} type="text"/>
+                                <FormElement title="From" info={part.from} functions={functions.handleWork} name="from" index={index} type="date"/>
+                                <FormElement title="To" info={part.to} functions={functions.handleWork} name="to" index={index} type="date"/>
+                                <FormElement title="Role" info={part.role} functions={functions.handleWork} name="role" index={index} type="text"/>
                             </form>
                             <div>
                                 <button onClick={() => functions.delWork(part.id)}  className="delAdd">delete</button>

@@ -81,3 +81,67 @@ input {
     border-radius: 2px;
 }
 
+.name {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 1.6rem;
+}
+
+.infoWrapper {
+    font-size: 1.2rem;
+    margin: 5px;
+}
+
+.personalHeading {
+    display: inline-block;
+    width: 150px;
+    font-weight: bold;
+}
+
+.personalInfo {
+    display: inline-block;
+}
+
+.bioHeading {
+    font-weight: bold;
+}
+
+.heading {
+    display: inline-block;
+    font-size: 1.4rem;
+}
+
+.info {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 1.2rem;
+}
+
+.level{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.educationInfo {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 1.1rem;
+}
+
+.title {
+    font-size: 1.6rem;
+}
+
+.position {
+    font-weight: bold;
+    font-size: 1.2rem
+}
+
+.role {
+    font-size: 1.1rem;
+}
+
+.indent5px {
+    margin-left: 5px;
+}

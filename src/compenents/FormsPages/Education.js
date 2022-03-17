@@ -12,11 +12,12 @@ const Education = (props) => {
                     return(
                         <div key={part.id}>
                             <form>
-                                <FormElement title="Subject" info={part.subject} functions={functions.handleEducation} name="subject" index={index}/>
-                                <FormElement title="Level" info={part.level} functions={functions.handleEducation} name="level" index={index}/>
-                                <FormElement title="School" info={part.school} functions={functions.handleEducation} name="school" index={index}/>
-                                <FormElement title="From" info={part.from} functions={functions.handleEducation} name="from" index={index}/>
-                                <FormElement title="To" info={part.to} functions={functions.handleEducation} name="to" index={index}/>
+                                <FormElement title="Subject" info={part.subject} functions={functions.handleEducation} name="subject" index={index} type="text"/>
+                                <FormElement title="Level" info={part.level} functions={functions.handleEducation} name="level" index={index} type="text"/>
+                                <FormElement title="Grade" info={part.grade} functions={functions.handleEducation} name="grade" index={index} type="text"/>
+                                <FormElement title="School" info={part.school} functions={functions.handleEducation} name="school" index={index} type="text"/>
+                                <FormElement title="From" info={part.from} functions={functions.handleEducation} name="from" index={index} type="date"/>
+                                <FormElement title="To" info={part.to} functions={functions.handleEducation} name="to" index={index} type="date"/>
                             </form>
                             <div>
                                 <button onClick={() => functions.delEducation(part.id)}  className="delAdd">delete</button>
